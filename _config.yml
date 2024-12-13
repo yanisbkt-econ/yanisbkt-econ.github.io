@@ -12,7 +12,7 @@ title                    : "Yanis Bekhti"
 title_separator          : "-"
 name                     : &name "Yanis Bekhti"
 description              : &description "PhD Candidate in Economics jointly enrolled at Pantheon-Sorbonne University (France) and Università Cattolica del Sacro Cuore (Italy)."
-url                      : https://yanisbkt-econ.github.io/ 
+url                      : https://yanisbkt-econ.github.io 
 baseurl                  : "" 
 repository               : ""
 
