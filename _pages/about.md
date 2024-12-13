@@ -10,4 +10,4 @@ I am a second-year PhD Candidate in Economics, jointly enrolled at Università C
 
 I hold an M.Phil. in Development Economics from Université Panthéon-Sorbonne and an M.Phil. in Social Sciences from the Institute of Latin American Studies. Previously, I completed my Bachelor's degree in Economics at the Clermont-Auvergne University. If you have any questions or would like to connect, feel free to reach out - I would be delighted to discuss with you!
 
-To access the latest version of my Curriculum Vitae (CV), please click [here](https://github.com/yanisbkt-econ/files/MyCV.pdf). 
+To access the latest version of my Curriculum Vitae (CV), please click [here](https://yanisbkt-econ.github.io/files/MyCV.pdf).
