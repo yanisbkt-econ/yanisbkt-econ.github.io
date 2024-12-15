@@ -6,13 +6,67 @@ author_profile: true
 
 ## About myself 
 
-- Current member of the French Association of Development Economists ([AFEDEV](https://afedev.fr/)) and French Economic Association ([AFSE](https://www.afse.fr/)).
+<p>
+  - Current member of the French Association of Development Economists 
+  (<a href="https://afedev.fr/" 
+      style="color: #800020; text-decoration: none;" 
+      target="_blank">AFEDEV</a>) 
+  and French Economic Association 
+  (<a href="https://www.afse.fr/" 
+      style="color: #800020; text-decoration: none;" 
+      target="_blank">AFSE</a>).
+</p>
 
 ## Usefull links 
 
-- Playing [Tradle](https://games.oec.world/en/tradle/) every day should be a must for anyone interested in economics! 
+<p>
+  - Playing 
+  <a href="https://games.oec.world/en/tradle/" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Tradle</a> 
+  every day should be a must for anyone interested in economics!
+</p>
+
 
 ## Inspiring colleagues with fascinating research
 
-[Afifi Mohamed](https://sites.google.com/view/mohamedafifi/home?authuser=0), [Arenas-Diaz Guillermo](https://docenti.unicatt.it/ppd2/en/docenti/91099/guillermo-arenas-diaz/profilo), [Bazillier Rémi](https://remibazillier.wordpress.com/), [Cassi Lorenzo](https://lorenzocassi.wordpress.com/cv/), [Chakravarty Satyaki](https://satyaki4.github.io/), [Chauvet Lisa](https://sites.google.com/site/lisachauvetdial/cv), [Edo Anthony](https://sites.google.com/site/anthonyedohome/), [Montobbio Fabio](https://sites.google.com/site/montobbiofabio/), [Pellegrino Gabriele](https://sites.google.com/view/gabrielepellegrino/home), [Perego Erica](https://sites.google.com/site/ericaritaperego/research?authuser=0), [Renault Thomas](https://www.thomas-renault.com/), [Valette Jérôme](https://sites.google.com/view/valettejerome/home).   
+<p>
+  <a href="https://sites.google.com/view/mohamedafifi/home?authuser=0" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Afifi Mohamed</a>, 
+  <a href="https://docenti.unicatt.it/ppd2/en/docenti/91099/guillermo-arenas-diaz/profilo" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Arenas-Diaz Guillermo</a>, 
+  <a href="https://remibazillier.wordpress.com/" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Bazillier Rémi</a>, 
+  <a href="https://lorenzocassi.wordpress.com/cv/" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Cassi Lorenzo</a>, 
+  <a href="https://satyaki4.github.io/" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Chakravarty Satyaki</a>, 
+  <a href="https://sites.google.com/site/lisachauvetdial/cv" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Chauvet Lisa</a>, 
+  <a href="https://sites.google.com/site/anthonyedohome/" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Edo Anthony</a>, 
+  <a href="https://sites.google.com/site/montobbiofabio/" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Montobbio Fabio</a>, 
+  <a href="https://sites.google.com/view/gabrielepellegrino/home" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Pellegrino Gabriele</a>, 
+  <a href="https://sites.google.com/site/ericaritaperego/research?authuser=0" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Perego Erica</a>, 
+  <a href="https://www.thomas-renault.com/" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Renault Thomas</a>, 
+  <a href="https://sites.google.com/view/valettejerome/home" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Valette Jérôme</a>.
+</p>
+
 
