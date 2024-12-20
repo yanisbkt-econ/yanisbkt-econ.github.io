@@ -40,13 +40,13 @@ author_profile: true
   <a href="https://remibazillier.wordpress.com/" 
      style="color: #800020; text-decoration: none;" 
      target="_blank">Bazillier Rémi</a>, 
-  <a href="https://lorenzocassi.wordpress.com/cv/" 
+  <a href="https://lorenzocassi.wordpress.com/" 
      style="color: #800020; text-decoration: none;" 
      target="_blank">Cassi Lorenzo</a>, 
   <a href="https://satyaki4.github.io/" 
      style="color: #800020; text-decoration: none;" 
      target="_blank">Chakravarty Satyaki</a>, 
-  <a href="https://sites.google.com/site/lisachauvetdial/cv" 
+  <a href="https://sites.google.com/site/lisachauvetdial/" 
      style="color: #800020; text-decoration: none;" 
      target="_blank">Chauvet Lisa</a>, 
   <a href="https://sites.google.com/site/anthonyedohome/" 
@@ -58,7 +58,7 @@ author_profile: true
   <a href="https://sites.google.com/view/gabrielepellegrino/home" 
      style="color: #800020; text-decoration: none;" 
      target="_blank">Pellegrino Gabriele</a>, 
-  <a href="https://sites.google.com/site/ericaritaperego/research?authuser=0" 
+  <a href="https://sites.google.com/site/ericaritaperego/home?authuser=0" 
      style="color: #800020; text-decoration: none;" 
      target="_blank">Perego Erica</a>, 
   <a href="https://www.thomas-renault.com/" 
