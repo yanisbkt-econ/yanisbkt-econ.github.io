@@ -6,8 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-**Welcome!**
-
 <p>
   I am a second-year PhD Candidate in Economics, jointly enrolled at Università Cattolica del Sacro Cuore (Italy) and Université Panthéon-Sorbonne (France). I am conducting my work under the supervision of 
   <a href="https://sites.google.com/site/montobbiofabio/" target="_blank" style="color: #800020; text-decoration: none;">Prof. Fabio Montobbio</a> 
