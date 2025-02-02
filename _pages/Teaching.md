@@ -5,7 +5,7 @@ title: "Teaching"
 
 ## Teaching activity
 
-**Course:** International trade (21h)<br>
+**Course:** International trade (2x15h)<br>
 **Level:** Tutorials, Undergraduate (in French)<br>
 **Venue:** Université Panthéon-Sorbonne<br>
 **Date:** 01/2025 - 05/2025<br>
