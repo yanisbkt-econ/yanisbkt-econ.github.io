@@ -61,6 +61,9 @@ author_profile: true
   <a href="https://sites.google.com/site/ericaritaperego/home?authuser=0" 
      style="color: #800020; text-decoration: none;" 
      target="_blank">Perego Erica</a>, 
+   <a href="https://climateeconrob.github.io/" 
+     style="color: #800020; text-decoration: none;" 
+     target="_blank">Robert Reinhardt</a>, 
   <a href="https://www.thomas-renault.com/" 
      style="color: #800020; text-decoration: none;" 
      target="_blank">Renault Thomas</a>, 
