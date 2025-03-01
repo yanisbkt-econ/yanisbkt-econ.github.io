@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Yanis Bekhti"
 title_separator          : "-"
 name                     : &name "Yanis Bekhti"
-description              : &description "PhD Candidate in Economics jointly enrolled at Pantheon-Sorbonne University (France) and Università Cattolica del Sacro Cuore (Italy)."
+description              : &description "PhD Candidate in Economics jointly enrolled at Pantheon-Sorbonne University (France) and Università Cattolica del Sacro Cuore (Italy). My research interests lie at the intersection of development economics and innovation, with a particular focus on structural change, deindustrialisation, commodities, and their relationship with economic growth."
 url                      : https://yanisbkt-econ.github.io 
 baseurl                  : "" 
 repository               : ""

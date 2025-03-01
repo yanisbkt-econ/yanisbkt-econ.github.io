@@ -1,6 +1,6 @@
 ---
 permalink: /Teaching/
-title: "Teaching"
+title: "Teaching activties"
 ---
 <div style="display: flex; justify-content: space-between;">
 

@@ -6,26 +6,32 @@ author_profile: true
 
 ## About myself 
 
-<p>
-  - Current member of the French Association of Development Economists 
-  (<a href="https://afedev.fr/" 
-      style="color: #800020; text-decoration: none;" 
-      target="_blank">AFEDEV</a>) 
-  and French Economic Association 
-  (<a href="https://www.afse.fr/" 
-      style="color: #800020; text-decoration: none;" 
-      target="_blank">AFSE</a>).
-</p>
+<ul>
+  <li>
+    Current member of the French Association of Development Economists 
+    (<a href="https://afedev.fr/" 
+        style="color: #800020; text-decoration: none;" 
+        target="_blank">AFEDEV</a>) 
+    and the French Economic Association 
+    (<a href="https://www.afse.fr/" 
+        style="color: #800020; text-decoration: none;" 
+        target="_blank">AFSE</a>).
+  </li>
+  <li>In my free time, I enjoy studying geopolitics and exploring Latin America's history.</li>
+</ul>
+
 
 ## Usefull links 
 
-<p>
-  - Playing 
-  <a href="https://games.oec.world/en/tradle/" 
-     style="color: #800020; text-decoration: none;" 
-     target="_blank">Tradle</a> 
-  every day should be a must for anyone interested in economics!
-</p>
+<ul>
+  <li>
+    Playing 
+    <a href="https://games.oec.world/en/tradle/" 
+       style="color: #800020; text-decoration: none;" 
+       target="_blank">Tradle</a> 
+    every day should be a must for anyone interested in economics!
+  </li>
+</ul>
 
 
 ## Inspiring colleagues with fascinating research

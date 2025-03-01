@@ -1,6 +1,6 @@
 ---
 permalink: /Talks/
-title: "Talks"
+title: "Conferences and seminars"
 ---
 
 ## 2025 (Scheduled)

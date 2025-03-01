@@ -1,6 +1,6 @@
 ---
 permalink: /Research/
-title: "Research"
+title: "Publications and on-going works"
 ---
 ## Works in progress
 
