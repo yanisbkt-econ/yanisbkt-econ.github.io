@@ -1,0 +1,77 @@
+# Site settings.
+locale                   : "en-GB"
+title                    : "Yanis Bekhti"
+title_separator          : "-"
+description              : "I am a fourth-year Ph.D. candidate in Economics, enrolled in a joint program between the Catholic University of Milan in Italy and Paris 1 Panthéon-Sorbonne University in France. My research mostly focuses on applied macroeconomic development, studying the extent to which structural change and manufacturing remain engines of long-term growth."
+url                   : https://yanisbkt-econ.github.io
+baseurl                  : ""
+navbar_home_label        : "Home"
+port                     : 4001
+
+# Sidebar author profile (see _includes/author-profile.html)
+author:
+  avatar           : "profile.jpg"
+  name             : "Yanis Bekhti"
+  bio              : "Ph.D. Candidate in Economics"
+  location         : "Paris, France"
+  email            : "yanis.bekhti@univ-paris1.fr"
+  email_label      : "Email 1"
+  email2           : "yanis.bekhti@unicatt.it"
+  email2_label     : "Email 2"
+  orcid            : # 
+  googlescholar    : # 
+  github           : "yanisbkt-econ"
+  linkedin         : "yanisbekhti"
+
+# Image shown in link previews (in /images/). Regenerate it if you change profile.jpg.
+og_image                 : "profile-share.jpg"
+
+# Search engine ownership verification (Google Search Console, Bing Webmaster Tools).
+google_site_verification : u05AgWizd4rk2UaL6zuzQBx_--_XhtbIrWU4lQy5lpA
+bing_site_verification   : 41113DFEA861A1839C1606E87197372B
+
+# Reading files
+include:
+  - _pages
+exclude:
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - vendor
+encoding: "utf-8"
+
+# Markdown processing
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

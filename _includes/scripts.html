@@ -1,0 +1,23 @@
+<script src="{{ base_path }}/assets/js/main.min.js"></script>
+
+<script>
+(function($) {
+  function constrainMobileNav() {
+    if ($(window).width() > 768) return;
+    var $vlinks = $('#site-nav .visible-links');
+    var $hlinks = $('#site-nav .hidden-links');
+    var $btn = $('#site-nav button');
+    var $items = $vlinks.children('li:not(.masthead__menu-item--lg)');
+    while ($items.length > 3) {
+      $items.last().prependTo($hlinks);
+      $btn.removeClass('hidden');
+      $items = $vlinks.children('li:not(.masthead__menu-item--lg)');
+    }
+    $btn.attr('count', $hlinks.children().length);
+  }
+  constrainMobileNav();
+  $(window).on('resize', function() {
+    requestAnimationFrame(constrainMobileNav);
+  });
+})(jQuery);
+</script>
