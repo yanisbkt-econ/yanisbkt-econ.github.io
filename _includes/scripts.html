@@ -2,22 +2,119 @@
 
 <script>
 (function($) {
+  var $vlinks = $('#site-nav .visible-links');
+  var $hlinks = $('#site-nav .hidden-links');
+  var $btn = $('#site-nav button');
+  $vlinks.children().add($hlinks.children()).each(function(i) { $(this).attr('data-order', i); });
+
+  function keepOriginalOrder($list) {
+    $list.children().sort(function(a, b) { return $(a).data('order') - $(b).data('order'); }).appendTo($list);
+  }
+
   function constrainMobileNav() {
-    if ($(window).width() > 768) return;
-    var $vlinks = $('#site-nav .visible-links');
-    var $hlinks = $('#site-nav .hidden-links');
-    var $btn = $('#site-nav button');
-    var $items = $vlinks.children('li:not(.masthead__menu-item--lg)');
-    while ($items.length > 3) {
-      $items.last().prependTo($hlinks);
-      $btn.removeClass('hidden');
-      $items = $vlinks.children('li:not(.masthead__menu-item--lg)');
+    if ($(window).width() > 768) {
+      keepOriginalOrder($vlinks);
+      if (!$hlinks.children().length) return;
+      $hlinks.children().appendTo($vlinks);
+      keepOriginalOrder($vlinks);
+      $btn.addClass('hidden');
+      $hlinks.addClass('hidden');
+      return;
     }
-    $btn.attr('count', $hlinks.children().length);
+    $hlinks.children('.masthead__menu-item--pin').appendTo($vlinks);
+    var unpinned = 'li:not(.masthead__menu-item--lg):not(.masthead__menu-item--pin)';
+    var pinned = $vlinks.children('.masthead__menu-item--pin').length;
+    var $items = $vlinks.children(unpinned);
+    while ($items.length + pinned > 3) {
+      $items.last().prependTo($hlinks);
+      $items = $vlinks.children(unpinned);
+    }
+    keepOriginalOrder($vlinks);
+    keepOriginalOrder($hlinks);
+    $btn.toggleClass('hidden', !$hlinks.children().length);
   }
   constrainMobileNav();
   $(window).on('resize', function() {
     requestAnimationFrame(constrainMobileNav);
+  });
+
+  document.addEventListener('touchstart', function() {}, { passive: true });
+
+  $(document).on('click', '[data-disclosure]', function() {
+    var $button = $(this);
+    var open = $button.attr('aria-expanded') !== 'true';
+    var $panel = $('#' + $button.attr('aria-controls'));
+    $button.attr('aria-expanded', open);
+    $panel.toggleClass('is-collapsed', !open);
+    $button.find('.toggle-hint').text(open ? 'Click to collapse' : 'Click to expand');
+    var label = $button.attr(open ? 'data-label-open' : 'data-label-closed');
+    if (label) $button.text(label);
+    if (open) revealPanel($button[0], $panel[0]);
+  });
+
+  function revealPanel(button, panel) {
+    var gap = 24;
+    var mastheadHeight = $('.masthead').outerHeight();
+    var start = performance.now();
+    function follow(now) {
+      if (button.getAttribute('aria-expanded') !== 'true') return;
+      var overflow = panel.getBoundingClientRect().bottom + gap - window.innerHeight;
+      var roomAbove = button.getBoundingClientRect().top - mastheadHeight - gap;
+      var distance = Math.min(overflow, roomAbove);
+      if (distance > 0) window.scrollBy(0, distance);
+      if (now - start < 400) requestAnimationFrame(follow);
+    }
+    requestAnimationFrame(follow);
+  }
+
+  $(function() {
+    var $navButton = $('#site-nav button');
+    var $navMenu = $('#site-nav .hidden-links');
+    var $contactButton = $('.author__urls-wrapper button');
+    var $contactMenu = $('.author__urls');
+
+    function closeNav() {
+      $navMenu.addClass('hidden');
+      $navButton.removeClass('close').attr('aria-expanded', false);
+    }
+
+    function setContact(open) {
+      $contactMenu.toggleClass('is-open', open);
+      $contactButton.attr('aria-expanded', open);
+    }
+
+    $navButton.on('click', function() {
+      $navButton.attr('aria-expanded', !$navMenu.hasClass('hidden'));
+    });
+
+    $contactButton.off('click').on('click', function() {
+      if ($contactMenu.length) {
+        $contactMenu[0].style.setProperty('--trigger-center', $contactButton.outerWidth() / 2 + 'px');
+      }
+      setContact(!$contactMenu.hasClass('is-open'));
+    });
+
+    $(document).on('click', function(event) {
+      var $target = $(event.target);
+      if (!$target.closest('#site-nav').length) closeNav();
+      if (!$target.closest('.author__urls-wrapper').length) setContact(false);
+    });
+
+    $(document).on('keydown', function(event) {
+      if (event.key !== 'Escape') return;
+      if (!$navMenu.hasClass('hidden')) {
+        closeNav();
+        $navButton.trigger('focus');
+      }
+      if ($contactMenu.hasClass('is-open')) {
+        setContact(false);
+        $contactButton.trigger('focus');
+      }
+    });
+
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      $('a').off('click.smoothscroll');
+    }
   });
 })(jQuery);
 </script>

@@ -1,17 +1,16 @@
-# Note to myself: The following is the order of the links in the header of the website. Changing the order here will adjust the order and you can also add additional links. Removing a link prevents it from showing in the header, but does not prevent it from being included in the site.
-
 main:
   - title: "Research"
     url: /Research/
-  
+
   - title: "Talks"
     url: /Talks/
 
   - title: "Teaching"
     url: /Teaching/
-  
+
   - title: "Miscellaneous"
     url: /Miscellaneous/
-    
+
   - title: "CV"
     url: https://yanisbkt-econ.github.io/files/MyCV.pdf
+    pin: true

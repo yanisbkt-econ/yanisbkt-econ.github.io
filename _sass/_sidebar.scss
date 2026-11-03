@@ -1,49 +1,24 @@
-/* ==========================================================================
-   SIDEBAR
-   ========================================================================== */
-
-/*
-   Default
-   ========================================================================== */
-
 .sidebar {
-
-  -webkit-transform: translate3d(0, 0 , 0);
-          transform: translate3d(0, 0 , 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 
   @include clearfix();
   margin-bottom: 1em;
 
   @media screen and (min-width: $sidebar-screen-min-width) {
     height: 100vh;
-    overflow-y: auto;               // Add scrollbar if the sidebar is too long
+    overflow-y: auto;
     position: fixed;
     padding-top: $masthead-height;
   }
 
   @include breakpoint($large) {
     @include span(2 of 12);
-    opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 
   @include breakpoint($x-large-bp) {
     max-width: $sidebar-link-max-width;
     padding-right: 0;
-  }
-
-  h2, h3, h4, h5, h6 {
-    margin-bottom: 0;
-    font-family: $sans-serif-narrow;
-  }
-
-  h3, h4 {
-    font-size: $type-size-5;
   }
 
   p, li {
@@ -57,31 +32,6 @@
   }
 }
 
-.sidebar__right {
-  margin-bottom: 1em;
-
-  @include breakpoint($large) {
-    position: relative;
-    float: right;
-    width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
-    z-index: 10;
-  }
-
-  @include breakpoint($x-large-bp) {
-    width: $right-sidebar-width;
-  }
-}
-
-.sidebar .author__bio {
-  position: relative;
-  margin-bottom: 1.5em; // space below the bio
-}
-
-/*
-   Author profile and links
-   ========================================================================== */
-
 .author__avatar {
   display: table-cell;
   vertical-align: top;
@@ -92,13 +42,12 @@
     display: block;
     width: auto;
     height: auto;
-    padding: 0px;
   }
 
   img {
     max-width: 150px;
-    border-radius: 12px;
-    border: 2.5px solid black;
+    border: 1px solid #000;
+    border-radius: 6px;
   }
 }
 
@@ -112,63 +61,49 @@
   @include breakpoint($large) {
     display: block;
     width: 100%;
+    max-width: 150px;
+    margin-bottom: 14px;
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.author__name {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 4px;
-  }
-}
 .sidebar .author__name {
+  margin: 0;
   font-family: $sans-serif;
   font-size: $type-size-5;
+  font-weight: bold;
+  line-height: 1.2;
+
+  @include breakpoint($large) {
+    margin-top: 12px;
+  }
+}
+
+.sidebar .author__bio {
+  margin: 0;
+  color: $muted-text-color;
+
+  @include breakpoint($large) {
+    margin-top: 4px;
+
+    &::after {
+      content: "";
+      display: block;
+      margin-top: 12px;
+      border-bottom: 1px solid $light-gray;
+    }
+  }
 }
 
 .sidebar .author__desktop {
   display: none;
+
   @media screen and (min-width: 1024px) {
     display: block;
   }
 }
 
-.author__pronouns {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-.author__bio {
-  position: relative;
-  display: inline-block;
-  font-style: normal;
-  color: #444;
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.25rem;
-
-  @include breakpoint($large) {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    margin-top: 0.75rem;
-    width: 100%;
-    border-bottom: 1px solid rgba(3, 3, 3, 0.879);
-  }
-}
-
-/* Mobile: name and title on the same line, without the rule under the title */
 @include breakpoint(max-width $large - 1px) {
   .author__profile {
     display: flex;
@@ -193,16 +128,9 @@
   }
 
   .sidebar .author__bio {
-    display: inline-block; // moves to the next line as a whole when space runs out
-    margin: 0;
-    padding: 0;
-
-    &::after {
-      display: none;
-    }
+    display: inline-block;
   }
 }
-
 
 .author__urls-wrapper {
   position: relative;
@@ -210,7 +138,6 @@
   vertical-align: middle;
   font-family: $sans-serif;
   z-index: 10;
-  position: relative;
   cursor: pointer;
 
   li:last-child {
@@ -225,6 +152,13 @@
 
   button {
     margin-bottom: 0;
+    min-height: 2.75rem;
+    -webkit-tap-highlight-color: transparent;
+    transition: $press-transition;
+
+    &:active {
+      transform: scale(0.96);
+    }
 
     @include breakpoint($large) {
       display: none;
@@ -233,7 +167,6 @@
 }
 
 .author__urls {
-  display: none;
   position: absolute;
   right: 0;
   margin-top: 0px;
@@ -246,6 +179,25 @@
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
 
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.94);
+  transform-origin: calc(100% - var(--trigger-center, 2.5rem)) -10px;
+  pointer-events: none;
+  transition: opacity 0.15s ease-in, transform 0.2s $ease-in, visibility 0s 0.2s;
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    transition: opacity 0.2s ease-out, transform 0.3s $ease-out, visibility 0s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transform: none;
+  }
+
   @include breakpoint($large) {
     display: block;
     position: relative;
@@ -254,6 +206,11 @@
     border: 0;
     background: transparent;
     box-shadow: none;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    transition: none;
   }
 
   &:before {
@@ -261,7 +218,7 @@
     content: "";
     position: absolute;
     top: -11px;
-    left: calc(50% - 10px);
+    right: calc(var(--trigger-center, 2.5rem) - 10px);
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
@@ -278,7 +235,7 @@
     content: "";
     position: absolute;
     top: -10px;
-    left: calc(50% - 10px);
+    right: calc(var(--trigger-center, 2.5rem) - 10px);
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
@@ -303,9 +260,16 @@
     color: inherit;
     font-size: $type-size-5;
     text-decoration: none;
+    transition: color 0.15s ease-out;
 
-    &:hover {
-      text-decoration: underline;
+    i {
+      color: #000;
+      transition: color 0.15s ease-out;
+    }
+
+    &:hover,
+    &:hover i {
+      color: $accent-color;
     }
   }
 }

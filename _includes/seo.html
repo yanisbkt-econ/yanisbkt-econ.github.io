@@ -1,6 +1,5 @@
 {% include base_path %}
 
-<!-- begin SEO -->
 {% assign seo_url = site.url | append: site.baseurl %}
 
 {% if page.title %}
@@ -17,7 +16,6 @@
 <meta name="description" content="{{ seo_description }}">
 <link rel="canonical" href="{{ seo_page_url }}">
 
-<!-- Link previews (LinkedIn, WhatsApp, Facebook, Slack, iMessage...) -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="{{ site.locale | replace: "-", "_" }}">
 <meta property="og:site_name" content="{{ site.title }}">
@@ -33,7 +31,6 @@
 <meta name="twitter:description" content="{{ seo_description }}">
 <meta name="twitter:image" content="{{ seo_image }}">
 
-<!-- Structured data: site name shown by Google, and who the site is about -->
 {% assign author = site.author %}
 {%- capture same_as -%}
   {%- if author.github %}https://github.com/{{ author.github }}|{% endif -%}
@@ -55,7 +52,7 @@
       "@type": "Person",
       "name": {{ author.name | jsonify }},
       "url": {{ seo_url | append: "/" | jsonify }},
-      "image": {{ author.avatar | prepend: "/images/" | prepend: base_path | jsonify }},
+      "image": {{ seo_image | jsonify }},
       "jobTitle": {{ author.bio | jsonify }},
       "sameAs": {{ same_as | jsonify }}
     }
@@ -68,4 +65,3 @@
 {% if site.bing_site_verification %}
   <meta name="msvalidate.01" content="{{ site.bing_site_verification }}">
 {% endif %}
-<!-- end SEO -->

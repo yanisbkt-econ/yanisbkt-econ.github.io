@@ -8,5 +8,4 @@ group :jekyll_plugins do
 end
 gem 'github-pages'
 
-# Faster file-change detection for 'jekyll serve' on Windows (ignored elsewhere)
 gem 'wdm', '>= 0.2.0', platforms: :windows
